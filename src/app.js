@@ -64,12 +64,6 @@ app.get('/weather', (req,res) => {
             })
         })        
     })
-
-    // res.send({
-    //     forecast:'it is snowing',
-    //     name:'Surat',
-    //     address:req.query.address
-    // })
 })
 
 app.get('/products', (req,res) => {
