@@ -9,6 +9,7 @@ const lbl_forecast = document.querySelector('.forecast')
 weatherForm.addEventListener('submit',(e) => {
     e.preventDefault();
     var location = searchInput.value
+    lbl_forecast.innerHTML = 'Please Wait...'
     fetch('/weather?address='+location).then((response) => {
         response.json().then((data) => {
             if(data.error){
