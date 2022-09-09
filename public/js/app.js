@@ -1,13 +1,5 @@
 console.log('client side javascript loaded');
 
-// fetch('http://puzzle.mead.io/puzzle').then((response) => {
-//     response.json().then((data) => {
-//         console.log(data);
-//     })   
-// })
-
-
-    
 const weatherForm = document.querySelector('form')
 const searchInput = document.querySelector('input')
 
@@ -17,7 +9,7 @@ const lbl_forecast = document.querySelector('.forecast')
 weatherForm.addEventListener('submit',(e) => {
     e.preventDefault();
     var location = searchInput.value
-    fetch('http://localhost:3000/weather?address='+location).then((response) => {
+    fetch('/weather?address='+location).then((response) => {
         response.json().then((data) => {
             if(data.error){
                 // console.log(data.error);
